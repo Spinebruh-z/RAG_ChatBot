@@ -10,3 +10,4 @@ pymupdf
 fastembed
 langchain-ollama 
 protobuf==3.20.*
+faiss-cpu
