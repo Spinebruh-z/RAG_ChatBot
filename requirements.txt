@@ -9,3 +9,4 @@ sentence-transformers
 pymupdf
 fastembed
 langchain-ollama 
+protobuf==3.20.*
