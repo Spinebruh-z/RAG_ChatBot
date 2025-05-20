@@ -1,6 +1,6 @@
 import os
 import tempfile
-from langchain.vectorstores import Chroma
+from langchain.vectorstores import FAISS
 from langchain.document_loaders import PyMuPDFLoader
 from langchain.text_splitter import RecursiveCharacterTextSplitter
 from langchain.memory import ConversationBufferMemory
@@ -120,8 +120,8 @@ def setup_rag_pipeline(pdf_files, embedding_provider, llm_provider):
             embeddings = get_embeddings(embedding_provider)
             
             # Create vector database
-            vectordb = Chroma.from_documents(chunks, embedding=embeddings)
-            
+            vectordb = FAISS.from_documents(chunks, embedding=embeddings)
+
             retriever = vectordb.as_retriever(search_type="similarity", search_kwargs={"k": 5})
             memory = ConversationBufferMemory(memory_key="chat_history", return_messages=True)
 
