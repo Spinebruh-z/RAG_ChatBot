@@ -1,0 +1,11 @@
+streamlit
+langchain
+langchain-openai
+langchain-community
+langchain-anthropic
+langchain-groq
+chromadb
+sentence-transformers
+pymupdf
+fastembed
+langchain-ollama 
